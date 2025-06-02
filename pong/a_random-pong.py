@@ -13,7 +13,7 @@ env = PLE(game, display_screen=True, fps=30) # fps=30 es más normal, display_sc
 env.init()
 
 # Obtener acciones posibles
-actions = env.get ActionSet() # Deberían ser [None, 119 (w), 115 (s)]
+actions = env.getActionSet() # Deberían ser [None, 119 (w), 115 (s)]
 
 # Agente con acciones aleatorias
 while True:

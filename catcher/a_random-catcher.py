@@ -1,11 +1,11 @@
-from ple.games.pong import Pong
+from ple.games.catcher import Catcher
 from ple import PLE
 import numpy as np
 import time
 
 # --- Configuración del Entorno y Agente ---
 # Inicializar el juego
-game = Pong(width=200, height=320, MAX_SCORE=5) # Podemos pasar parámetros para modificar la dificultad
+game = Catcher(width=200, height=320, init_lives=3) # Podemos pasar parámetros para modificar la dificultad
 env = PLE(game, display_screen=True, fps=30) # fps=30 es más normal, display_screen=True para ver
 
 
@@ -13,7 +13,7 @@ env = PLE(game, display_screen=True, fps=30) # fps=30 es más normal, display_sc
 env.init()
 
 # Obtener acciones posibles
-actions = env.get ActionSet() # Deberían ser [None, 119 (w), 115 (s)]
+actions = env.getActionSet() # Deberían ser [None, 119 (w), 115 (s)]
 
 # Agente con acciones aleatorias
 while True:
